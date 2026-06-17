@@ -13,6 +13,9 @@ extends Node
 
 enum Mode { IDLE, PLACING, MOVING }
 
+## Emitted when the interaction mode changes, so the HUD can show a hint.
+signal status_changed(text: String)
+
 var room: Node2D  # the RoomView; set by Main before _ready
 
 var _mode: int = Mode.IDLE
@@ -27,11 +30,13 @@ func begin_placing(item_id: StringName) -> void:
 	_active_item = item_id
 	_ghost_rotation = 0
 	_mode = Mode.PLACING
+	status_changed.emit("Placing %s — tap the grid (Rotate to spin)" % item_id)
 
 
 func set_store_mode(on: bool) -> void:
 	_store_mode = on
 	_mode = Mode.IDLE
+	status_changed.emit("Store mode ON — tap an item to remove" if on else "Tap an item to move it")
 
 
 func rotate_action() -> void:
@@ -75,11 +80,13 @@ func _handle_tap(cell: Vector2i) -> void:
 			if RoomState.move(_moving_pid, cell):
 				_mode = Mode.IDLE
 				_moving_pid = -1
+				status_changed.emit("Moved. Tap an item to move it, or pick decor")
 		Mode.IDLE:
 			var pid := _pid_at(cell)
 			if pid >= 0:
 				_moving_pid = pid
 				_mode = Mode.MOVING
+				status_changed.emit("Picked up — tap an empty cell to drop")
 
 
 ## Topmost (highest-layer) placement occupying a cell, or -1.
