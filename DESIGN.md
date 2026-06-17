@@ -467,7 +467,58 @@ always rewarded with *discovery*, never punished with loss.
 
 ---
 
-## 13. MVP — the vertical slice
+## 13. Onboarding & the first session
+
+**Governing rule:** *Hook before teach.* Land the feeling first; reveal
+mechanics one at a time, motivated by the fiction — never a tutorial wall.
+
+### First 5 minutes (the emotional arc)
+1. **Arrival (~30s):** you reach the inherited haven — quiet, dim, half-asleep.
+   The old keeper (mentor) gives *one* warm line. Mood, not lecture.
+2. **The first knock — the hook (~90s):** a sound at the door; you open it. A
+   cat *or* dog (player chooses who's there), cold and shy, looking to rest.
+   "Will you let them in?" You do. The signature ritual is done on turn one —
+   **risk-free, because this first knock is guaranteed.**
+3. **First care, taught by doing (~60s):** one guided action (food / a warm
+   spot); the pet responds visibly (first tell → response → reward loop, no
+   text). Auto-creates the **first Memory Book entry** ("the day they arrived").
+4. **Name them** — right after the first positive moment, so you name a friend.
+5. **Make a cozy spot (~60s):** handed a soft bed (+ maybe a plant); place it
+   freely; the pet walks over and *uses it* — decoration → behavior, shown
+   instantly. The seed of the spine.
+6. **Close on a high:** the pet curls up content; the haven visibly **warms — a
+   lamp lights, color returns** (the restoration arc, felt immediately).
+   "Capture this?" → first photo → first Memory Book image. Complete and warm
+   even if they never return.
+
+*Deferred entirely in session 1:* Charm, shop/currency, plants-as-economy,
+courtship mechanics, seasons.
+
+### Progressive disclosure (one new idea per session, paced by the revival)
+- **S2:** Coins + shop — a first tip/mail arrives; buy one decor item.
+- **S3:** Plants — a gift of seeds; grow your first (real-time growth + garden).
+- **S4 — the spine clicks:** the first *wild visitor* arrives; ritual pays off as
+  a visitor (vs resident); **Field Guide** opens with its first silhouette +
+  hint; lesson lands — *a nicer home brings more travelers.* That hint becomes
+  the player's first self-set goal; onboarding graduates into the real game.
+- **Later, as earned:** Charm/Room Report, the signs/courtship loop, Trinkets,
+  migration waves, a second room.
+
+The **spine is taught in two stages**: micro in S1 (a bed gets used → decoration
+shapes behavior), macro in S4 (a lovely room draws visitors → decoration shapes
+*who shows up*).
+
+### Guidance principles
+- **Mentor = recurring, then fades:** a warm keeper introduces each new system as
+  the haven revives, then settles into an occasional friendly presence.
+- **Teach diegetically** — mentor nudges + the pet's own cues; never modal walls;
+  all text skippable.
+- **No fail, no rush, no gate** — guidance invites, never blocks.
+- **End S1 on a curiosity seed, not a chore** ("more travelers are on the road").
+
+---
+
+## 14. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -500,7 +551,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 14. Phased roadmap
+## 15. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -511,7 +562,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 15. Open decisions
+## 16. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
@@ -523,7 +574,6 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
   seasonal visitors return each year; nothing permanently missable.
 
 ### Still to design (next sessions)
-- **Onboarding / first 5 minutes:** teach the spine without a tutorial wall.
 - **Progression & pacing curve:** how the haven opens over weeks; multiple
   rooms/biomes; what gates species, tools, and rooms.
 - **Tech & art direction:** lock the engine; base resolution, palette, pipeline.
