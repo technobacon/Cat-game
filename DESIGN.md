@@ -3,10 +3,70 @@
 > Working title: TBD. A cozy mobile game about raising pets and cultivating a
 > living habitat in a cute, modern pixel-art style.
 
-**Status:** Early concept / pre-production
-**Platform:** Mobile (iOS + Android)
+**Status:** Concept design **complete**; pre-production. Next action: build the
+**MVP vertical slice** (§16).
+**Platform:** Mobile-first (iOS + Android), portrait; desktop/web builds come
+free from the engine for prototyping (§15).
+**Engine:** **Godot 4** — locked (§15).
 **Scope intent:** Solo dev — ship a small, polished MVP first, then expand.
-**Business model:** Generous free-to-play; **cosmetic-only** monetization.
+**Business model:** Generous free-to-play; **cosmetic-only** monetization (§10).
+
+> **How to read this doc.** §1–2 give the fantasy and fiction; **§3–4 are the
+> mechanical heart** (the habitat *tag system* — read these first if you only
+> read two sections); §5–12 detail the loops that hang off that spine; §13–14
+> cover onboarding and long-term progression; §15 locks tech & art; **§16 is the
+> build target.** Cross-references look like "(§N)". A glossary of load-bearing
+> terms follows the contents. The appendix is the one-screen principles checklist
+> every feature must pass.
+
+---
+
+## Contents
+
+1. [The core fantasy](#1-the-core-fantasy)
+2. [Setting & narrative frame](#2-setting--narrative-frame)
+3. [The spine: a living ecosystem where decoration is *functional*](#3-the-spine-a-living-ecosystem-where-decoration-is-functional)
+4. [Habitat stats & Charm](#4-habitat-stats--charm)
+5. [The two states](#5-the-two-states)
+6. [Signature creative pillars](#6-signature-creative-pillars)
+7. [Pets](#7-pets)
+8. [The pet's inner life: care, reading, bonding & behavior](#8-the-pets-inner-life-care-reading-bonding--behavior)
+9. [Pet acquisition & bonding](#9-pet-acquisition--bonding)
+10. [Economy: currencies, decoration & income](#10-economy-currencies-decoration--income)
+11. [Time, seasons & retention](#11-time-seasons--retention)
+12. [Meta systems](#12-meta-systems)
+13. [Onboarding & the first session](#13-onboarding--the-first-session)
+14. [Progression & pacing](#14-progression--pacing)
+15. [Tech & art direction](#15-tech--art-direction)
+16. [MVP — the vertical slice](#16-mvp--the-vertical-slice)
+17. [Phased roadmap](#17-phased-roadmap)
+18. [Open decisions](#18-open-decisions)
+- [Appendix: design principles checklist](#appendix-design-principles-checklist)
+
+---
+
+## Glossary — load-bearing terms
+
+These terms recur throughout and have precise meanings. (Section links point to
+the full treatment.)
+
+| Term | Meaning |
+|---|---|
+| **The spine** | The one unifying loop: *curate the space → attract & sustain pets → pets enrich the space → unlock more.* Every system must feed it (§3). |
+| **Tag / tag vector** | Environmental properties (`warmth, humidity, light, greenery, verticality, hiding, water, softness`) emitted by decor & plants. A **room's** state is the sum of its items' tags (§3). |
+| **Comfort profile** | A pet's target tag vector. How well the room matches it drives attraction & thriving (§3). |
+| **Thriving** | A *flourishing gradient*, never survival. Matching a pet's profile makes it flourish; a mismatch just means "not yet," never death/punishment (§3). |
+| **Charm** | A single visible beauty score (from Harmony, Coherence, Composition, Variety) that **multiplies** attraction and **hard-gates** rare pets — the anti-monoculture + beauty layer (§4). |
+| **Visitor** | A wild pet drawn by the room's tags that drops by to "audition" — frequent, free, low-stakes; not yours yet (§9). |
+| **Resident** | A visitor courted into staying — rare, earned, a real bond. The "knock at the door" (§9). |
+| **Signs / signs meter** | Accumulating traces (paw prints, nibbled plant) that visibly advance a courted species toward moving in; a miss never zeroes out (§9). |
+| **Coins** | Earned **volume** currency — buys the bulk of decor/plants. From photos, tips, produce, mail (§10). |
+| **Trinkets** | Earned **prestige** currency (never purchasable) — from thriving residents bringing treasures; buys the rare high-Charm pieces (§10). |
+| **Field Guide** | The *discovery* collection: silhouettes + habitat hints that turn collecting into a detective loop (§9, §12). |
+| **Memory Book** | The *emotional* collection: a per-pet journal of relationship milestones; the most shareable artifact (§8). |
+| **Critter Gazette** | The in-world photo outlet that pays Coins for photos — the optional "meta" skill ceiling (§10). |
+| **Tell** | A readable behavioral cue (ear flick, where it sits) conveying a pet's state *without numbers* — reading them is the core skill (§5, §8). |
+| **Tier: fantastical** | A small set of magical creatures unlocked deep in progression as a "wow" payoff (§2, §14). |
 
 ---
 
@@ -685,19 +745,26 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ## 18. Open decisions
 
-- **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
-  (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
-  Flutter + Flame. *Decision pending.*
-- Working title / art direction reference board.
-- Exact starting tag set and pet comfort profiles (needs prototyping/tuning).
-- Visitor cadence tuning (how often, how rare).
-- ~~Limited-time / seasonal event pets~~ **Resolved:** migration frame means
-  seasonal visitors return each year; nothing permanently missable.
+### Resolved (recorded so they aren't re-litigated)
+- ~~**Engine**~~ **Resolved: Godot 4** (§15) — free, strong 2D + built-in
+  lighting, exports to mobile/desktop/web. (Unity / Flutter+Flame considered and
+  set aside.)
+- ~~**Camera, art fidelity, orientation**~~ **Resolved:** 3/4 angled diorama,
+  hi-fi modern pixel art, mobile-first portrait (§15).
+- ~~**Progression shape**~~ **Resolved:** finite restoration arc that resolves +
+  endless living-haven tail; intimate resident scale (§14).
+- ~~**Room/biome model**~~ **Resolved:** discrete navigable rooms, each starting
+  **blank** and tuned by the player into the biome they want (§14).
+- ~~**Limited-time / seasonal event pets**~~ **Resolved:** the migration frame
+  means seasonal visitors return each year; nothing permanently missable (§11).
 
-### Still to design (next sessions)
+### Still open (need prototyping/tuning, not a decision)
+- Working title; an art-direction reference/mood board.
+- Exact starting tag set and per-pet comfort profiles — tune against the MVP.
+- Visitor cadence tuning (how often, how rare).
 - **Pipeline specifics:** base virtual resolution, pixels-per-unit, scaling
-  mode, and the Aseprite → Godot atlas/tag convention (§15) — to firm up
-  alongside the first real art and the MVP build.
+  mode, and the Aseprite → Godot atlas/tag convention (§15) — firm up alongside
+  the first real art and the MVP build.
 
 ---
 
