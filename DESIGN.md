@@ -691,11 +691,17 @@ The production foundation — the gate before code. Locked decisions below.
   carry the emotional payload and the photography loop (§8).
 - Mood: warm, muted, golden-hour; cozy over crisp/clinical.
 
-### Pipeline notes (to firm up alongside the first art)
-- Pick a base virtual resolution and a consistent **pixels-per-unit** so all
-  assets share one pixel grid; decide integer-scale vs smooth-scale on mobile.
-- Aseprite as the likely sprite/animation tool; keep an organized tag/atlas
-  convention so the **tag-driven decor system (§3)** maps cleanly to art assets.
+### Pipeline (ratified at the MVP scaffold — see DEVELOPMENT_PLAN.md §1)
+- **Base virtual resolution: 720×1280** (portrait, 9:16).
+- **Pixels-per-unit: one shared pixel grid**, with decor authored on a **16 px
+  tile** module so footprints map cleanly to snap-to-grid placement (§10).
+- **Scaling: `canvas_items` stretch, aspect `keep`**, with the world rendered
+  into a **`SubViewport`** that is **integer-scaled** (pixel-perfect art),
+  independent of the resolution-independent HUD.
+- **Aseprite → Godot:** sources in `art_src/`, exported to `assets/sprites/` as
+  sheet + JSON; **animation tags = `SpriteFrames` animation names**; layer names
+  `floor/wall/surface/hanging` mirror the placement layers (§10) so the
+  **tag-driven decor system (§3)** maps 1:1 from art to data.
 
 ---
 
@@ -757,14 +763,15 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
   **blank** and tuned by the player into the biome they want (§14).
 - ~~**Limited-time / seasonal event pets**~~ **Resolved:** the migration frame
   means seasonal visitors return each year; nothing permanently missable (§11).
+- ~~**Pipeline specifics**~~ **Resolved (MVP scaffold):** 720×1280 portrait,
+  16 px tile grid, `canvas_items`/`keep` stretch with an integer-scaled world
+  `SubViewport`, and Aseprite→Godot sheet+JSON with tag/layer conventions
+  (§15; DEVELOPMENT_PLAN.md §1).
 
 ### Still open (need prototyping/tuning, not a decision)
 - Working title; an art-direction reference/mood board.
 - Exact starting tag set and per-pet comfort profiles — tune against the MVP.
 - Visitor cadence tuning (how often, how rare).
-- **Pipeline specifics:** base virtual resolution, pixels-per-unit, scaling
-  mode, and the Aseprite → Godot atlas/tag convention (§15) — firm up alongside
-  the first real art and the MVP build.
 
 ---
 

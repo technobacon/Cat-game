@@ -87,8 +87,10 @@ binding at the M0 scaffold (P§5), at which point we record them into DESIGN §1
 | **Godot version** | **Godot 4.x stable, GDScript**, C# only if a system clearly needs it (DESIGN §15) | Locked by design. |
 | **Target frame budget** | 60 fps; AI tick decoupled to ~5–10 Hz (P§4.6) | Mobile budget (P§0.6). |
 
-> These are *proposals in this plan only* until M0 ratifies and writes them into
-> DESIGN.md. Until then DESIGN §18 stays the authority on their "open" status.
+> **Status: ratified at the M0 scaffold** and recorded into DESIGN §15 (and
+> ticked off §18) in the same change, per the working agreement. Values may still
+> be revisited cheaply before content piles up, but they are now the project's
+> defaults, encoded in `game/project.godot`.
 
 ---
 

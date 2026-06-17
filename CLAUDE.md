@@ -15,12 +15,16 @@ decoration is functional, and that is the spine the whole game hangs from.*
 
 ## Current state
 
-- **Design: complete.** Pre-production. **No game code exists yet.**
-- The repo currently holds only documentation (`DESIGN.md`, `README.md`, this
-  file). The Godot project has not been scaffolded.
-- **Next concrete task:** the **MVP vertical slice** — one pet, one room — exactly
-  as scoped in [`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice). Do not
-  build beyond MVP scope without being asked; §16 lists explicit non-goals.
+- **Design: complete.** **Development plan: complete** — see
+  [`DEVELOPMENT_PLAN.md`](DEVELOPMENT_PLAN.md) (architecture, data model,
+  system specs, and the sequenced **M0–M13** MVP milestone plan).
+- **Engineering: M0 scaffold done.** A Godot 4 project lives under `game/`
+  (autoload skeletons, GUT smoke/RNG tests, CI workflow, ratified pipeline
+  values in `project.godot`). No gameplay systems yet.
+- **Next concrete task: milestone M1** (room, grid & placement) from
+  DEVELOPMENT_PLAN.md §5, building toward the **MVP vertical slice** — one pet,
+  one room — as scoped in [`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice).
+  Do not build beyond MVP scope without being asked; §16 lists explicit non-goals.
 
 ## Locked technical decisions (see §15)
 

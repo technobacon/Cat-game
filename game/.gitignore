@@ -1,0 +1,8 @@
+# Godot 4 editor/import cache
+/.godot/
+
+# GUT is fetched in CI and via scripts/setup_gut.sh — not vendored (P§6.4)
+/addons/gut/
+
+# Exports
+/export/

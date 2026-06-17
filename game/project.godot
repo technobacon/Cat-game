@@ -1,0 +1,42 @@
+; Engine configuration file.
+; Cozy Pet Game — MVP scaffold (DEVELOPMENT_PLAN.md M0).
+; Pipeline values ratified here: DESIGN.md §15 / §18, DEVELOPMENT_PLAN.md §1.
+
+config_version=5
+
+[application]
+
+config/name="Cozy Pet Game"
+config/description="A cozy waystation where wandering creatures rest. See DESIGN.md."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+; Order matters: dependency-light singletons first (P§2.3).
+EventBus="*res://src/autoload/event_bus.gd"
+RNG="*res://src/autoload/rng.gd"
+Balance="*res://src/autoload/balance.gd"
+GameClock="*res://src/autoload/game_clock.gd"
+RoomState="*res://src/autoload/room_state.gd"
+EconomyManager="*res://src/autoload/economy_manager.gd"
+SaveManager="*res://src/autoload/save_manager.gd"
+
+[display]
+
+; Mobile-first, portrait — base virtual resolution 720x1280 (DESIGN §15).
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/handheld/orientation="portrait"
+; canvas_items stretch + keep aspect; the world SubViewport is integer-scaled
+; for pixel-perfect art independently of the resolution-independent HUD (P§1).
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+; Hi-fi pixel art: nearest filtering by default so art stays crisp (DESIGN §15).
+textures/canvas_textures/default_texture_filter=0
