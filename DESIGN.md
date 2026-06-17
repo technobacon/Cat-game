@@ -231,7 +231,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 ### Two earned currencies (+ cosmetic cash)
 
 - **Coins — the volume/utility currency (earned).** The workhorse. Buys the
-  *bulk* of decor and plants — everyday building blocks. (Sources detailed below.)
+  *bulk* of decor and plants — everyday building blocks. (Sources below.)
 - **Trinkets — the prestige/beauty currency (earned only, never cash).** Come
   primarily from **thriving residents bringing you little found treasures** (the
   cat drops a shiny button, the magpie a glass bead), plus Charm milestones and
@@ -239,6 +239,31 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
   **cannot brute-force a beautiful room by grinding Coins**; the most beautiful
   items are gated behind the game's actual values (care + aesthetics). Pets
   literally help furnish their own beautiful home.
+
+### Where Coins come from
+
+**Principle:** Coins come from your home being a *beloved, beautiful place* —
+never from a separate chore loop. Income is a readout of the spine, like
+acquisition. Sources are spread fairly evenly so no single loop is mandatory,
+but **photography is the "meta"** — the highest skill ceiling and best returns
+for mastery, never *required*.
+
+- **Photography → the "Critter Gazette" (the meta, active).** An in-world outlet
+  pays Coins for photos, scored on subject rarity, the captured *moment*
+  (behavior), and composition + backdrop Charm. Pays you for doing the thing the
+  game is about; rewards beauty and the bond. Highest ceiling, optional to chase.
+- **Visitor "thank-you" tips (passive, scales with the spine).** Hosted visitors
+  leave a small token; the more inviting/charming the home, the more visitors and
+  tips. Same lever as attraction — no new system to tend.
+- **Plant produce (light trickle).** A thriving plant occasionally yields
+  something sellable; a pet that loves it boosts the yield. Reframes the original
+  farming idea as a *bonus from a well-kept garden*, never a treadmill.
+- **Daily stipend / "mail" (cadence, not grind).** A small reliable daily
+  delivery gives a baseline and a reason to check in, so income never *depends*
+  on any one source.
+
+Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
+(prestige) flow from **deep care** (thriving residents). Neither is a chore.
 
 ### Decoration acquisition & placement
 
@@ -275,7 +300,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
   treadmill. They grow on real-world time (no energy bars).
 - **Symbiosis:** a pet that loves a plant boosts its yield; plants emit tags
   that attract pets. Visible cause-and-effect, not a hidden buff number.
-- *(Where Coins actually come from is being designed — see Open decisions.)*
+- Farming is explicitly **not** the income engine — see "Where Coins come from".
 
 ---
 
@@ -297,10 +322,13 @@ Goal: prove the magic with the smallest possible build. **One pet, one room.**
 - Inspection state: read tells + 3 care actions (feed, water, play).
 - Room state: place ~10 decor items + 1 plant type, free movement of pet.
 - Habitat tag system with ~4 tags (`warmth, greenery, softness, hiding`).
-- 1 plant that grows on a real-time timer and harvests to soft currency.
+- A basic **Charm** read (variety + clutter) feeding attraction, so the player
+  feels beauty matters.
+- 1 plant that grows on a real-time timer and yields a sellable harvest.
 - 1 **visiting** pet (e.g. sparrow) attracted when the room crosses a tag
-  threshold — proves the ecosystem loop end to end.
-- Photo button → saves to a simple gallery.
+  threshold — proves the ecosystem loop end to end; leaves a small tip.
+- **Coins** from: photo payouts (the meta) + a daily stipend + visitor tips.
+- Photo button → saves to a simple gallery; photos pay Coins.
 - Local save.
 
 **Explicitly out of scope for MVP:** monetization/IAP, multiple species, weather/
