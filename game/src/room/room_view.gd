@@ -67,6 +67,9 @@ func _make_visual(p: Placement, it: DecorItem) -> Node2D:
 	rect.color = it.placeholder_color
 	rect.size = Vector2(eff.x, eff.y) * TILE_PX - Vector2(2, 2)
 	rect.position = Vector2(1, 1)
+	# Don't let the block (a Control) swallow taps — they must reach the
+	# placement controller so items can be moved/stored.
+	rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	holder.add_child(rect)
 	holder.position = cell_to_world(p.cell)
 	# Lower layers behind higher ones; within a layer, Y-sort by screen position.
