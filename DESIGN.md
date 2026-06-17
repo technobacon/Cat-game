@@ -173,7 +173,78 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 7. Pet acquisition & bonding
+## 7. The pet's inner life: care, reading, bonding & behavior
+
+This is the soul of the game — everything else is the frame around it.
+
+### Core reframe (makes it cozy, not Tamagotchi)
+> **Needs are invitations, not obligations. Care unlocks *upside*; neglect just
+> means a quieter, dimmer pet — never punishment.**
+
+A hungry pet is *asking you for something* (a moment of connection), not failing.
+Ignore it and you don't get a dead pet — you get a less expressive one: it won't
+thrive, gift Trinkets, show rich behaviors, or pose for great photos. You lose
+the good stuff; you never trigger bad stuff.
+
+### Care loop
+- **Three lean needs** (`Food, Water, Enrichment`) that decay *slowly and
+  forgivingly*. Offline they settle to a "content but missing you" floor — never
+  to zero. Return after a week and the pet is *happy to see you*.
+- **Care actions are bonding interactions, not chores.** Depth = how *this*
+  pet responds (favorite foods, preferred play, a spot it likes to be groomed).
+- **Low floor, high ceiling.** Minimum effort keeps the pet fine; richness
+  (favorites, play, time together) is optional. Never a mandatory tap-fest.
+
+### Reading the pet (the signature skill — empathy as mastery)
+- State is shown through **behavior, not numbers**: sits by the empty bowl
+  (hungry), paces at the window (visitor near), curls on your cushion (content),
+  ears flat / hiding (overwhelmed).
+- **Each pet's "language" is partly individual** — traits modulate tells, so you
+  learn *this* animal; a second of a species is a fresh relationship.
+- **Needs UI = hybrid that fades with bond:** start with gentle indicators/hints,
+  then fade them as the bond grows so you rely on reading behavior. The game
+  *rewards* relying on reading ("you two really know each other now") — turning
+  the UI-vs-immersion tension into a relationship milestone.
+- **Mastery is felt through the relationship**, not a score; misreading is never
+  punished, just a gentle miss you learn from.
+
+### Bond progression (the emotional payoff)
+- Bond is the long arc; needs are the daily surface. Warm-named stages:
+  **Wary → Curious → Friendly → Bonded → Inseparable.** Each unlocks:
+  - more behaviors & little tricks (visibly more alive);
+  - **trust moments** — greets you at the door, sleeps on your lap, accepts a
+    hat, and **brings you Trinkets** (bond literally funds the beautiful home);
+  - **the Memory Book** *(core feature)* — a per-pet relationship journal of
+    milestones ("the first night she slept on your lap"). The *emotional*
+    collection (vs the Field Guide's *discovery* collection) and the game's most
+    shareable artifact.
+- **Slow burn, not grindable** — bond grows through interaction *quality* with a
+  soft daily ceiling; friendship is earned over real weeks.
+
+### Room behavior & the "alive" simulation
+- **Utility-driven AI** (solo-dev-friendly): each behavior scores by need + mood
+  + trait + nearby decor; highest wins, with randomness for surprise. Emergent
+  life, cheaply.
+- **Decor-driven behaviors are the payoff loop** — cat tree climbed, box hidden
+  in, sunbeam napped in. More varied/beautiful decor = more behaviors = richer
+  life and better photos. This is *why* Charm and variety matter, made visible.
+- **Trait & time flavor** — lazy pets nap, bold explore, shy hide from visitors;
+  midday naps, dusk friskiness, watching the rain.
+- **Inter-pet relationships** *(in scope)* — pets befriend/cuddle/groom or
+  squabble over the best cushion. Unscripted vignettes are the screenshot gold
+  and deepen the reason to keep multiple pets.
+- **Decoration becomes directorial** — players arrange the room to *engineer*
+  moments and photos ("catch her napping in the new hammock"). Setting a stage
+  for life fuses decoration + behavior + photography.
+
+### How it interlocks
+read the pet → care well → bond deepens → pet thrives, behaves richly & gifts
+Trinkets → a more beautiful, behavior-rich home → better photos & more thriving.
+The animal is the engine, not a stat block.
+
+---
+
+## 8. Pet acquisition & bonding
 
 **Thesis:** *You don't collect pets. You earn their trust by building a home
 they can't resist.* Acquisition is not a separate system — it is the **readout
@@ -226,7 +297,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 
 ---
 
-## 8. Economy: currencies, decoration & income
+## 9. Economy: currencies, decoration & income
 
 ### Two earned currencies (+ cosmetic cash)
 
@@ -304,7 +375,7 @@ Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
 
 ---
 
-## 9. Meta systems
+## 10. Meta systems
 
 - **Collection / "Field Guide":** discovered species, traits seen, photos taken.
 - **Achievements:** behavior-driven and discovery-driven (e.g. "host 3 visitors
@@ -313,13 +384,19 @@ Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
 
 ---
 
-## 10. MVP — the vertical slice
+## 11. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
 **In scope:**
 - 1 starter pet (cat) with a temperament trait and 4–5 readable tells.
 - Inspection state: read tells + 3 care actions (feed, water, play).
+- Needs as **invitations** (slow, forgiving decay; no fail state), shown via
+  gentle indicators + behavior.
+- A simple **bond** track (a few stages) that unlocks a couple of trust
+  behaviors — proves care deepens the relationship.
+- Utility-driven room behaviors that respond to decor (nap in sunbeam, use a
+  placed item) — proves the "alive" feel.
 - Room state: place ~10 decor items + 1 plant type, free movement of pet.
 - Habitat tag system with ~4 tags (`warmth, greenery, softness, hiding`).
 - A basic **Charm** read (variety + clutter) feeding attraction, so the player
@@ -331,7 +408,8 @@ Goal: prove the magic with the smallest possible build. **One pet, one room.**
 - Photo button → saves to a simple gallery; photos pay Coins.
 - Local save.
 
-**Explicitly out of scope for MVP:** monetization/IAP, multiple species, weather/
+**Explicitly out of scope for MVP:** monetization/IAP, multiple species,
+inter-pet relationships, the full Memory Book, fading-UI progression, weather/
 seasons, achievements, breeding, cloud save, social features.
 
 **The MVP succeeds if:** a player intuitively learns that *changing the room
@@ -339,7 +417,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 11. Phased roadmap
+## 12. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -350,7 +428,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 12. Open decisions
+## 13. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
