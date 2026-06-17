@@ -591,7 +591,55 @@ among roommates. *MVP stays one room;* multi-room is a Phase 2+ expansion.
 
 ---
 
-## 15. MVP — the vertical slice
+## 15. Tech & art direction
+
+The production foundation — the gate before code. Locked decisions below.
+
+### Engine — **Godot 4**
+- Free and open-source; **no licensing risk** and no per-install fees.
+- Best-in-class **2D** workflow with a **built-in 2D lighting system** — directly
+  serves the warming-haven arc (a lamp lights, color returns; §13) and
+  golden-hour mood.
+- One export target → **iOS, Android, desktop, and web**. The **web export** lets
+  us put a playable prototype behind a link for instant feedback.
+- GDScript for fast iteration; C# available if a system needs it later.
+- Trade-off accepted: Unity's mature mobile live-ops/ads SDKs and larger asset
+  store are a weaker draw here because monetization is deliberately gentle (§9).
+
+### Platform & orientation
+- **Mobile-first, portrait.** One-handed play fits the notification-driven,
+  short-session check-in loop (§11); the room **scrolls vertically** and UI sits
+  comfortably under the thumb.
+- Desktop/web builds come "for free" from Godot for prototyping and sharing;
+  full PC/console polish is a later consideration, not a launch target.
+
+### Camera & perspective — **3/4 angled diorama**
+- A cozy terrarium/dollhouse view: shows **floor space for decoration** *and*
+  **verticality** (shelves, hanging plants, climbing perches).
+- Reads both the placed decor and the **roaming, expressive pets** clearly — the
+  habitat-as-spine (§3) and the pet "tells" (§5) need to be legible at a glance.
+- Implies a layered 2D scene (background / mid / foreground) with depth-sorted
+  sprites so pets pass in front of and behind decor convincingly.
+
+### Art style — **hi-fi "modern" pixel art**
+- Higher-resolution pixels, **rich warm palette**, soft shadows, particles, and
+  **smooth multi-frame animation** — not chunky 8/16-bit retro.
+- **Dynamic lighting is a feature, not polish:** the haven visibly warms as it
+  revives, and time-of-day / weather (§11) shift the mood.
+- **Animation is the heart of "alive":** budget the most art effort into
+  expressive pet idles, reaction tells, and the emergent vignettes (§5–6); these
+  carry the emotional payload and the photography loop (§8).
+- Mood: warm, muted, golden-hour; cozy over crisp/clinical.
+
+### Pipeline notes (to firm up alongside the first art)
+- Pick a base virtual resolution and a consistent **pixels-per-unit** so all
+  assets share one pixel grid; decide integer-scale vs smooth-scale on mobile.
+- Aseprite as the likely sprite/animation tool; keep an organized tag/atlas
+  convention so the **tag-driven decor system (§3)** maps cleanly to art assets.
+
+---
+
+## 16. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -624,7 +672,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 16. Phased roadmap
+## 17. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -635,7 +683,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 17. Open decisions
+## 18. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
@@ -647,7 +695,9 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
   seasonal visitors return each year; nothing permanently missable.
 
 ### Still to design (next sessions)
-- **Tech & art direction:** lock the engine; base resolution, palette, pipeline.
+- **Pipeline specifics:** base virtual resolution, pixels-per-unit, scaling
+  mode, and the Aseprite → Godot atlas/tag convention (§15) — to firm up
+  alongside the first real art and the MVP build.
 
 ---
 
