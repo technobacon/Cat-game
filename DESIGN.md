@@ -103,7 +103,60 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 6. Plants & economy
+## 6. Pet acquisition & bonding
+
+**Thesis:** *You don't collect pets. You earn their trust by building a home
+they can't resist.* Acquisition is not a separate system — it is the **readout
+of the habitat spine**. You never "roll for a pet"; you make a home, and who
+shows up reflects how well you made it.
+
+### Two tiers
+
+- **Visitors (frequent, free, low-stakes):** wild pets drawn by the room's tag
+  profile drop by to *audition* — they roam, can be watched/photographed, and
+  fed a treat. Happens often. This is the daily novelty without breaking any
+  bond, because a visitor isn't yours yet.
+- **Residents (rare, earned, meaningful):** a visitor whose preferences are
+  well met keeps returning and eventually **asks to stay** — *that* is the knock
+  at the door. Scarce and emotional: the payoff of a courtship, not a dice roll.
+
+### The courtship / "signs" loop (replaces a binary daily roll)
+A miss must advance *anticipation*, never zero out. Each courted species has a
+visible **signs meter**:
+- Door beat: "Something was at the door — gone now, but there are muddy paw
+  prints." → a sign is logged.
+- Overnight traces: a half-nibbled plant, fur on a cushion, a shape at the window.
+- Signs accumulate visibly toward "willing to move in."
+- **Tag match raises both visit frequency and the rate signs accrue.** Higher
+  preference satisfaction = more likely to appear and to stay.
+
+### Protecting the bond
+- **No fungible pets.** One resident per species to start; later you may take in
+  a 2nd/3rd, but **each is a distinct individual** (coat, trait, name, quirk) —
+  a new relationship, never a clone.
+- **A reason for a 2nd:** `social`-trait pets actually *thrive* with a
+  same-species companion — so a second cat serves the ecosystem, not hoarding.
+- **Capacity is diegetic:** total residents gated by home size / "how many
+  friends you can truly care for," not arbitrary slot purchases.
+- **No abandonment heartbreak:** at capacity, pets "retire to the garden /
+  sanctuary" (a rotatable roster), always welcome back — never deleted.
+
+### Field guide as a treasure map
+An unidentified sign shows a silhouette + hints ("likes high places and warmth,
+active at dusk"). Collection becomes a detective loop: read the hint → build the
+habitat → court the pet. Discovery is active, driven by the same tag system.
+
+### Cadence & cozy ethics
+- A daily **visiting hour** (dawn/dusk ritual) **plus** player-triggered visits
+  (leave a matching treat/toy → a visit arrives within a window). Ritual + agency.
+- **Anti-FOMO:** miss a day and signs/visits wait or accumulate. No permanently
+  missable core pets.
+- **Pacing without timers:** early game is generous; rarer species need more
+  specialized habitats, so the *complexity of the home itself* is the gate.
+
+---
+
+## 7. Plants & economy
 
 - Plants grow on **real-world time** (cozy cadence, no energy bars).
 - Harvest → **soft currency** (plus caring for pets and taking photos also pays
@@ -122,7 +175,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 7. Meta systems
+## 8. Meta systems
 
 - **Collection / "Field Guide":** discovered species, traits seen, photos taken.
 - **Achievements:** behavior-driven and discovery-driven (e.g. "host 3 visitors
@@ -131,7 +184,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 8. MVP — the vertical slice
+## 9. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -154,7 +207,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 9. Phased roadmap
+## 10. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -165,7 +218,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 10. Open decisions
+## 11. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
@@ -173,6 +226,9 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 - Working title / art direction reference board.
 - Exact starting tag set and pet comfort profiles (needs prototyping/tuning).
 - Visitor cadence tuning (how often, how rare).
+- **Limited-time / seasonal event pets:** do any *missable* pets exist, or does
+  that violate the cozy promise? *Leaning: seasonal visitors return each year,
+  nothing permanently missable.*
 
 ---
 
