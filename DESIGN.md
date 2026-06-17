@@ -408,7 +408,57 @@ Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
 
 ---
 
-## 11. Meta systems
+## 11. Time, seasons & retention
+
+**Throughline:** time makes the world feel present and alive; being away is
+always rewarded with *discovery*, never punished with loss.
+
+### The clock — 1:1 real-time
+- The world runs on the phone's real clock; the pet **shares your real day**
+  (morning grog, midday sunbeam naps, dusk friskiness, sleeping at night). That
+  presence is the core "alive & shares my life" feeling.
+- **Nocturnal vs diurnal** creatures turn the "I only play at night" problem into
+  a feature: whenever you play you get a *full but different* experience; nobody
+  is locked out of progress, only out of some visitors at some hours.
+
+### Seasons — layered
+- **Ambient season follows the real calendar** (real winter looks wintry, real
+  holidays feel festive) — grounded, warm, zero maintenance.
+- **Migration waves rotate every ~1–2 weeks** on their own cycle — a fresh band
+  of travelers regularly passes through, independent of real season. Real
+  seasons for *atmosphere*; migration waves for *content cadence*.
+
+### Offline — the world lives, nothing is punished
+- Plants grow; tips and the daily "mail" stipend accrue; **visitor signs
+  accumulate** → you return to a pile of *discoveries*, not missed appointments.
+- Needs settle to a "content but missing you" floor — never zero, never guilt.
+- **Bond never decays.** Growth may pause; it never regresses. Non-negotiable.
+- **Idle layer = light touch:** accrual while away is modest; active play
+  (photos, courting, decorating) is where the real value is. A pet game, not an
+  idle clicker.
+- No pay-to-skip timers exist, so clock-changing ("time travel") hurts nobody —
+  don't fight it.
+
+### Session shapes — both respected
+- **Quick check-in (1–3 min), the retention backbone:** collect accrual, greet
+  the pet (a bond beat), see who's visiting, snap one photo. Must feel *complete
+  on its own* — never "you only did half your chores."
+- **Deep session (10–20+ min), always available, never demanded:** redecorate,
+  court a species by tuning the habitat, shoot for the Gazette, browse the
+  Memory Book, reorganize rooms.
+- Two gentle daily pulls (morning accrual + an evening visiting hour), optional.
+
+### Notifications & retention ethics
+- **Gentle invitations only**, event-driven, capped, player-controlled
+  ("A traveler is resting at your door 🐾").
+- **Never** guilt or loss-aversion ("Your pet misses you!", "You'll lose your
+  streak!"). No punishing streaks, no energy systems.
+- Reward presence only by *adding* warmth (a happy welcome back); absence never
+  subtracts. Retention comes from curiosity and fondness, not coercion.
+
+---
+
+## 12. Meta systems
 
 - **Collection / "Field Guide":** discovered species, traits seen, photos taken.
 - **Achievements:** behavior-driven and discovery-driven (e.g. "host 3 visitors
@@ -417,7 +467,7 @@ Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
 
 ---
 
-## 12. MVP — the vertical slice
+## 13. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -450,7 +500,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 13. Phased roadmap
+## 14. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -461,7 +511,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 14. Open decisions
+## 15. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
@@ -473,8 +523,6 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
   seasonal visitors return each year; nothing permanently missable.
 
 ### Still to design (next sessions)
-- **Shape of time & retention:** real-time vs accelerated clock, day/weather/
-  seasons, offline behavior, the daily session loop, cozy-ethical notifications.
 - **Onboarding / first 5 minutes:** teach the spine without a tutorial wall.
 - **Progression & pacing curve:** how the haven opens over weeks; multiple
   rooms/biomes; what gates species, tools, and rooms.
