@@ -6,13 +6,18 @@ on:
   pull_request:
   workflow_dispatch:
 
+# A new push cancels an in-progress run on the same ref (also frees a hung run).
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: Headless GUT tests
     runs-on: ubuntu-latest
     env:
       GODOT_VERSION: "4.6.3-stable"
-      GUT_VERSION: "v9.3.0"
+      # Empty = latest GUT (must match the Godot version; old pins hang on exit).
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +32,7 @@ jobs:
 
       - name: Fetch GUT
         working-directory: game
-        run: GUT_VERSION="${GUT_VERSION}" ./scripts/setup_gut.sh
+        run: ./scripts/setup_gut.sh
 
       - name: Import resources
         working-directory: game
@@ -35,6 +40,8 @@ jobs:
 
       - name: Run tests
         working-directory: game
+        # timeout guards against a test runner that fails to exit; a hang
+        # becomes a fast, visible failure instead of burning the runner.
         run: |
-          godot --headless -s res://addons/gut/gut_cmdln.gd \
+          timeout 240 godot --headless -s res://addons/gut/gut_cmdln.gd \
             -gdir=res://tests -ginclude_subdirs -gexit
