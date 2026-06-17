@@ -29,6 +29,7 @@ func test_save_round_trip() -> void:
 	var ok := SaveManager.save_state({"hello": "world"})
 	assert_eq(ok, OK, "save_state returns OK")
 	var loaded := SaveManager.load_state()
-	assert_eq(loaded.get("save_version"), SaveManager.SAVE_VERSION, "save_version is written")
+	# JSON numbers parse as float; compare as int against the version constant.
+	assert_eq(int(loaded.get("save_version")), SaveManager.SAVE_VERSION, "save_version is written")
 	var state: Dictionary = loaded.get("state", {})
 	assert_eq(state.get("hello"), "world", "state round-trips losslessly")
