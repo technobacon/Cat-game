@@ -61,7 +61,77 @@ does it need?" — a puzzle, not a punishment.
 
 ---
 
-## 3. The two states
+## 3. Habitat stats & Charm
+
+The stat system's real job is not to *measure* the room — it is to make
+**variety and beauty mechanically necessary**, so rooms stay unique and pretty
+instead of collapsing into a min-maxed monoculture (a "room full of ferns").
+
+### Three layers (kept readable on purpose)
+
+**Layer 1 — Environmental tags (the attraction substrate): ~8.**
+`warmth · humidity · light · greenery · verticality · hiding · water · softness`
+Properties the room *emits*; few enough to show on one radar chart. (MVP: 4.)
+
+**Layer 2 — Charm (the anti-degeneracy + beauty layer): 1 visible score** built
+from ~4 sub-factors shown in a friendly "Room Report":
+- **Harmony** — color palettes don't clash
+- **Coherence** — items share a theme/style
+- **Composition** — breathing room (not sparse, not cluttered); uses layers
+  (floor / wall / surfaces / hanging)
+- **Variety** — directly penalizes monoculture
+
+**Layer 3 — Per-pet stats (kept LEAN — cozy, not Tamagotchi chore):**
+3 needs (`Food, Water, Enrichment`) + derived `Mood`, `Bond`, `Thriving`, plus
+discrete **traits** (temperament + a style preference). Resist adding needs —
+every need is a chore tax.
+
+### How attraction is computed
+
+```
+Attraction (and sign-accrual / thriving) = tag match × Charm
+```
+
+- **Charm is a punishing multiplier for *everyone*.** You *can* still build an
+  ugly room and attract common pets — it just works far worse. A fern-pile has
+  high greenery but trash Charm (no variety, cluttered, no composition).
+- **Charm is also a hard gate for rare/exotic pets.** Lore-justified: "the
+  axolotl only appears in serene, well-kept spaces." Aesthetic mastery is the
+  endgame; the fanciest collection entries require a genuinely beautiful home.
+
+### The five mechanisms that kill min-maxing (stack all)
+
+1. **Diminishing returns per item type** — the 5th fern gives almost nothing, so
+   spam can't reach high values; variety is forced.
+2. **Multi-axis comfort profiles** — a frog needs greenery *and* humidity *and*
+   hiding *and* water; you can't fern your way to four axes.
+3. **Charm as a multiplier (+ gate)** — beauty becomes mechanically mandatory.
+4. **Quality over quantity items** — one "ancient fern in a ceramic pot" beats
+   five generic ferns on tags *and* Charm, and costs less clutter.
+5. **Behavioral payoff** — rich, varied rooms give pets things to *do* (more
+   vignettes, better photos); ugly rooms are dull to watch.
+
+### Pets have aesthetic taste (the uniqueness engine)
+
+Each pet rewards a *style*, not just an environment: a zen axolotl loves
+minimalist/serene, a magpie loves eclectic/shiny, a fennec loves warm desert
+tones. There is **no single optimal beautiful room** — the player builds
+*different* beautiful rooms for different pets, so habitats diverge instead of
+converging. (One room can't satisfy a desert fox *and* a rainforest frog → the
+long-term answer is **multiple rooms/biomes**; cohabitation becomes a puzzle.
+MVP stays one room.)
+
+### Keep Charm legible & generous
+Reward *intentionality* (coherence, harmony, breathing room); only punish
+obvious degeneracy (monoculture, clutter, clashing). Never impose one "correct"
+style — many themes score equally. The Room Report gives gentle tips ("a bit
+cluttered — try removing a few things"). Charm should feel like the game
+*noticing* effort, not grading art. **Free/earnable items must be able to reach
+max Charm** — paid cosmetics offer different looks, never *better* Charm.
+
+---
+
+## 4. The two states
 
 ### A. Inspection (intimacy & care)
 Pet fills the frame. Read its mood, needs, and personality **tells**.
@@ -78,7 +148,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 4. Signature creative pillars
+## 5. Signature creative pillars
 
 1. **Read your pet** — empathy as the core skill (see Inspection).
 2. **Emergent stories** — autonomous, personality-driven behavior worth sharing.
@@ -91,7 +161,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 5. Pets
+## 6. Pets
 
 - **Starter:** player picks **cat or dog**.
 - **Progression:** unlock increasingly exotic species (e.g. hedgehog → tree
@@ -103,7 +173,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 6. Pet acquisition & bonding
+## 7. Pet acquisition & bonding
 
 **Thesis:** *You don't collect pets. You earn their trust by building a home
 they can't resist.* Acquisition is not a separate system — it is the **readout
@@ -156,7 +226,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 
 ---
 
-## 7. Plants & economy
+## 8. Plants & economy
 
 - Plants grow on **real-world time** (cozy cadence, no energy bars).
 - Harvest → **soft currency** (plus caring for pets and taking photos also pays
@@ -175,7 +245,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 
 ---
 
-## 8. Meta systems
+## 9. Meta systems
 
 - **Collection / "Field Guide":** discovered species, traits seen, photos taken.
 - **Achievements:** behavior-driven and discovery-driven (e.g. "host 3 visitors
@@ -184,7 +254,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 
 ---
 
-## 9. MVP — the vertical slice
+## 10. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -207,7 +277,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 10. Phased roadmap
+## 11. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -218,7 +288,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 11. Open decisions
+## 12. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
