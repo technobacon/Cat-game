@@ -41,8 +41,8 @@ This frame isn't plot — it's the *why* behind every system:
 | Seasons + returning visitors | **Migration** — creatures pass through with the seasons (anti-FOMO becomes natural rhythm) |
 | Coin income | Travelers leave tokens of thanks; you mail **postcards** of guests out into the world (photography → Gazette) |
 | Trinkets | Wanderers leave keepsakes from far-off places when happy |
-| Multiple rooms/biomes | Different wings/lodgings suited to creatures from different climates |
-| Restoration arc | Reviving the quiet haven shapes early/mid progression |
+| Multiple rooms/biomes | Blank wings you revive & tune into the habitats *you* want — no preset biomes (§14) |
+| Restoration arc | Reviving the quiet haven is the progression spine; resolves in a grand reopening, then an endless living haven (§14) |
 
 - **Emotional note:** hospitality, and the bittersweet warmth of things that come
   and go — some friends pass through (back next season), some stay forever.
@@ -518,7 +518,80 @@ shapes behavior), macro in S4 (a lovely room draws visitors → decoration shape
 
 ---
 
-## 14. MVP — the vertical slice
+## 14. Progression & pacing
+
+**Governing rule:** *one finite, heartfelt arc — then an endless living haven.*
+The restoration arc is a real campaign that resolves; the waystation life
+continues forever after. Best of both: a sense of accomplishment *and* a
+forever-cozy sandbox.
+
+### The macro spine — restoration = rooms = the species gate
+The haven starts as **one small, dim room** and you revive it outward into
+multiple rooms. Crucially, **every restored room starts blank — it has no preset
+biome.** A room *is* the sum of the items you place (§3 tag vector), so the
+player sculpts each room's environmental profile through decoration and decides
+what it becomes — a warm sunroom, a humid grotto, a shaded burrow-garden —
+**to match the species they personally want to attract.** Building the biome
+*is* the puzzle, not picking a prefab one.
+
+So the gate on which creatures can come is **how many rooms you've revived and
+how you've tuned each one.** Expanding the haven literally widens the road:
+more rooms → more distinct habitats you can run at once → more travelers reach
+you. (This extends the anti-monoculture rule of §4: one room can't please a
+desert fox *and* a rainforest frog, so revival is what lets habitats diverge.)
+
+### Parallel tracks (a goal for every kind of player)
+There is never just one thing to chase — players self-select, and every track
+feeds the others:
+1. **Restoration** (macro) — revive & tune rooms; the backbone that unlocks all.
+2. **Collection** — discover → court → befriend species (Field Guide).
+3. **Bond** — deepen each relationship (Memory Book, trust behaviors); slow burn.
+4. **Aesthetic / Charm** — raise Charm, unlock themes, earn Trinkets, master
+   beautiful rooms; the decorator's track.
+5. **Achievements** — behavior- & discovery-driven feats.
+
+### Scale — intimate by design
+The haven stays **intimate: a modest number of deeply-bonded residents** you
+truly cherish (capacity scales gently as rooms are revived — "more room for a
+few more friends"). The *variety and churn* come from *visitors*, not from
+hoarding residents — protecting the rule that **bonds are never broken** (§5).
+Choosing who earns a permanent spot is part of the game.
+
+### Pacing curve — front-loaded warmth, then a long slow burn
+- **Week 1:** starter pet → first room → first plants → first wild visitor →
+  first courted resident. Fast, generous, learn the loop.
+- **Weeks 2–4:** revive & tune the 2nd room; 3–5 species; first migration wave;
+  Charm/Room Report mastered; first Trinket buys. The game opens up.
+- **Months 2–3:** several player-built biomes; courting Charm-gated rarities;
+  first **Inseparable** bonds; seasonal events; the restoration arc nears its end.
+- **The climax — a grand reopening:** the fully-revived haven hosts a migration
+  **festival** where many creatures you've befriended return at once; the old
+  keeper formally **passes you the torch.** A warm, earned ending.
+- **Endless tail (post-arc):** rotating migration waves bring fresh species,
+  seasonal events, room re-designs, completing the Field Guide & Memory Book,
+  and the aspirational **fantastical-creature tier** — as the crossroads now
+  "touches stranger places" (§2), rare magical migrants appear, gated behind
+  mastering both Charm and exotic self-built biomes, often only during rare
+  celestial/seasonal moments. No new grind — just the perpetual gentle rhythm.
+
+### Gating levers — complexity & milestones, never timers
+- **Coins** gate volume (decor, plants, a room's base restoration cost).
+- **Milestones** gate access (revive the next room after N happy residents; a
+  Field Guide hint points at the habitat axis a wanted species needs).
+- **Charm** hard-gates rare species (§7); **Trinkets** gate the finest decor.
+- **Tools unlock verbs gradually** (camera → Gazette lenses → garden → grooming).
+- **No dead ends, no energy timers:** there's always one affordable next step,
+  and the Field Guide hint always makes "I want *that* pet" *actionable*.
+
+### Multiple-room specifics
+Rooms are discrete navigable spaces (swipe/door between them). A resident lives
+in the room whose profile suits it, so **who rooms where** is a placement puzzle
+that reinforces distinct, curated biomes; inter-pet relationships (§6) play out
+among roommates. *MVP stays one room;* multi-room is a Phase 2+ expansion.
+
+---
+
+## 15. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -551,7 +624,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 15. Phased roadmap
+## 16. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -562,7 +635,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 16. Open decisions
+## 17. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
@@ -574,8 +647,6 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
   seasonal visitors return each year; nothing permanently missable.
 
 ### Still to design (next sessions)
-- **Progression & pacing curve:** how the haven opens over weeks; multiple
-  rooms/biomes; what gates species, tools, and rooms.
 - **Tech & art direction:** lock the engine; base resolution, palette, pipeline.
 
 ---
