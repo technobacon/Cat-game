@@ -47,24 +47,19 @@ func rotate_action() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if room == null or not _is_primary_press(event):
+	if room == null:
 		return
-	var cell: Vector2i = room.world_to_cell(_event_pos(event))
-	_handle_tap(cell)
-
-
-func _is_primary_press(event: InputEvent) -> bool:
-	if event is InputEventMouseButton:
-		return event.button_index == MOUSE_BUTTON_LEFT and event.pressed
-	if event is InputEventScreenTouch:
-		return event.pressed
-	return false
-
-
-func _event_pos(event: InputEvent) -> Vector2:
-	if event is InputEventMouseButton:
-		return (event as InputEventMouseButton).position
-	return (event as InputEventScreenTouch).position
+	# Resolve the tapped position in the room's local space, which accounts for
+	# the canvas stretch/scaling so a click lands on the cell under the cursor.
+	var pos: Vector2
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		pos = room.get_local_mouse_position()
+	elif event is InputEventScreenTouch and event.pressed:
+		var local_event := room.make_input_local(event) as InputEventScreenTouch
+		pos = local_event.position
+	else:
+		return
+	_handle_tap(room.world_to_cell(pos))
 
 
 func _handle_tap(cell: Vector2i) -> void:

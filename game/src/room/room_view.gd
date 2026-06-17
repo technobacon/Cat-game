@@ -5,7 +5,6 @@ extends Node2D
 
 const TILE_PX := 16
 const GRID_COLOR := Color(1.0, 1.0, 1.0, 0.06)
-const BASE_RESOLUTION := Vector2i(720, 1280)
 
 @onready var _items_root: Node2D = $Items
 
@@ -24,7 +23,8 @@ func _ready() -> void:
 func _center_grid() -> void:
 	var gs: Vector2i = RoomState.model.grid_size
 	var px := Vector2(gs.x, gs.y) * TILE_PX
-	origin = (Vector2(BASE_RESOLUTION) - px) * 0.5
+	var view: Vector2 = get_viewport_rect().size
+	origin = (view - px) * 0.5
 
 
 func cell_to_world(cell: Vector2i) -> Vector2:

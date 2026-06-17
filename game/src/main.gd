@@ -1,54 +1,43 @@
 extends Node
-## Root composition (DEVELOPMENT_PLAN.md §2.2): a pixel-perfect World SubViewport
-## (the diorama) plus a resolution-independent HUD CanvasLayer. M1 boots into the
-## decorating slice — grid room + placement controller + decor palette.
+## Root composition (DEVELOPMENT_PLAN.md §2.2, simplified for M1).
+##
+## M1 renders the room directly in the main viewport and relies on the project's
+## canvas_items stretch (P§1) for consistent 720x1280 coordinates — this keeps
+## click->cell mapping simple and correct. The pixel-perfect SubViewport split
+## can be reintroduced later once there's art to justify it.
 
-const BASE_RESOLUTION := Vector2i(720, 1280)
 const ROOM_SCENE := preload("res://scenes/room.tscn")
 const PALETTE_SCRIPT := preload("res://src/ui/palette.gd")
 
 
 func _ready() -> void:
-	var viewport := _build_world()
+	_build_background()
 
-	var room: Node2D = ROOM_SCENE.instantiate()
-	viewport.add_child(room)
+	var room := ROOM_SCENE.instantiate()
+	add_child(room)
 
-	# Controller lives inside the SubViewport so input is already in room-space.
 	var controller := PlacementController.new()
 	controller.room = room
-	room.add_child(controller)
+	add_child(controller)
 
 	_build_hud(controller)
 
-	print("[boot] Cozy Pet Game — M1 room slice up (%dx%d portrait)" % [
-		BASE_RESOLUTION.x, BASE_RESOLUTION.y,
-	])
+	print("[boot] Cozy Pet Game — M1 room slice up")
 
 
-func _build_world() -> SubViewport:
-	var container := SubViewportContainer.new()
-	container.name = "World"
-	container.stretch = true
-	container.set_anchors_preset(Control.PRESET_FULL_RECT)
-	add_child(container)
+func _build_background() -> void:
+	# Dim "dark room" behind everything. In its own layer so it never eats input
+	# (the haven warms during onboarding, M12; DESIGN §13/§15).
+	var layer := CanvasLayer.new()
+	layer.layer = -1
+	add_child(layer)
 
-	var viewport := SubViewport.new()
-	viewport.name = "WorldViewport"
-	viewport.size = BASE_RESOLUTION
-	viewport.snap_2d_transforms_to_pixel = true
-	viewport.snap_2d_vertices_to_pixel = true
-	container.add_child(viewport)
-
-	# Placeholder "dark room" — the haven starts dim and warms during onboarding
-	# (M12; DESIGN §13/§15).
 	var bg := ColorRect.new()
 	bg.name = "DarkRoom"
 	bg.color = Color(0.10, 0.09, 0.12)
-	bg.size = BASE_RESOLUTION
-	viewport.add_child(bg)
-
-	return viewport
+	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(bg)
 
 
 func _build_hud(controller: PlacementController) -> void:
