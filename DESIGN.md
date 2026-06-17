@@ -25,7 +25,40 @@ ties them together instead.
 
 ---
 
-## 2. The spine: a living ecosystem where decoration is *functional*
+## 2. Setting & narrative frame
+
+**A waystation on the migration paths.** You keep a cozy little haven at a
+crossroads where wandering creatures stop to rest. Some pass through; a lucky
+few, made comfortable enough, decide to stay. You've *inherited* the haven from
+a previous keeper and it had fallen quiet — so reviving it is a gentle long arc
+that completes, but the game continues endlessly after.
+
+This frame isn't plot — it's the *why* behind every system:
+
+| Mechanic | Diegetic reason the frame provides |
+|---|---|
+| Visitor → resident courtship | Creatures are travelers; comforting one into staying *is* the premise |
+| Seasons + returning visitors | **Migration** — creatures pass through with the seasons (anti-FOMO becomes natural rhythm) |
+| Coin income | Travelers leave tokens of thanks; you mail **postcards** of guests out into the world (photography → Gazette) |
+| Trinkets | Wanderers leave keepsakes from far-off places when happy |
+| Multiple rooms/biomes | Different wings/lodgings suited to creatures from different climates |
+| Restoration arc | Reviving the quiet haven shapes early/mid progression |
+
+- **Emotional note:** hospitality, and the bittersweet warmth of things that come
+  and go — some friends pass through (back next season), some stay forever.
+  Cozy, never heavy: no villain, no urgency, no fail.
+- **Pets — real, with a sprinkle of magic:** mostly grounded real animals (cat,
+  dog, hedgehog, fennec, axolotl…); a small tier of **fantastical creatures**
+  unlocks deep in progression as a "wow" payoff — the crossroads can touch
+  stranger places the further you revive it.
+- **Light delivery:** a couple of recurring NPCs (a traveling merchant, an old
+  keeper who mentors you), pets carrying micro-stories of where they wandered
+  from (feeding Field Guide hints and the Memory Book), seasonal migration
+  festivals. All ambient and skippable.
+
+---
+
+## 3. The spine: a living ecosystem where decoration is *functional*
 
 What the player places determines **who visits, who thrives, and how pets
 behave.** Decoration, plants, collection, and pet behavior all feed each other:
@@ -61,7 +94,7 @@ does it need?" — a puzzle, not a punishment.
 
 ---
 
-## 3. Habitat stats & Charm
+## 4. Habitat stats & Charm
 
 The stat system's real job is not to *measure* the room — it is to make
 **variety and beauty mechanically necessary**, so rooms stay unique and pretty
@@ -131,7 +164,7 @@ max Charm** — paid cosmetics offer different looks, never *better* Charm.
 
 ---
 
-## 4. The two states
+## 5. The two states
 
 ### A. Inspection (intimacy & care)
 Pet fills the frame. Read its mood, needs, and personality **tells**.
@@ -148,7 +181,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 5. Signature creative pillars
+## 6. Signature creative pillars
 
 1. **Read your pet** — empathy as the core skill (see Inspection).
 2. **Emergent stories** — autonomous, personality-driven behavior worth sharing.
@@ -161,7 +194,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 6. Pets
+## 7. Pets
 
 - **Starter:** player picks **cat or dog**.
 - **Progression:** unlock increasingly exotic species (e.g. hedgehog → tree
@@ -173,7 +206,7 @@ A 2D room the player decorates and where pets roam autonomously.
 
 ---
 
-## 7. The pet's inner life: care, reading, bonding & behavior
+## 8. The pet's inner life: care, reading, bonding & behavior
 
 This is the soul of the game — everything else is the frame around it.
 
@@ -244,7 +277,7 @@ The animal is the engine, not a stat block.
 
 ---
 
-## 8. Pet acquisition & bonding
+## 9. Pet acquisition & bonding
 
 **Thesis:** *You don't collect pets. You earn their trust by building a home
 they can't resist.* Acquisition is not a separate system — it is the **readout
@@ -297,7 +330,7 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 
 ---
 
-## 9. Economy: currencies, decoration & income
+## 10. Economy: currencies, decoration & income
 
 ### Two earned currencies (+ cosmetic cash)
 
@@ -375,7 +408,7 @@ Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
 
 ---
 
-## 10. Meta systems
+## 11. Meta systems
 
 - **Collection / "Field Guide":** discovered species, traits seen, photos taken.
 - **Achievements:** behavior-driven and discovery-driven (e.g. "host 3 visitors
@@ -384,7 +417,7 @@ Coins (volume) flow from **hosting** (photos, tips, produce, mail); Trinkets
 
 ---
 
-## 11. MVP — the vertical slice
+## 12. MVP — the vertical slice
 
 Goal: prove the magic with the smallest possible build. **One pet, one room.**
 
@@ -417,7 +450,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 12. Phased roadmap
+## 13. Phased roadmap
 
 - **Phase 1 — Vertical slice (MVP above):** validate the core loop & feel.
 - **Phase 2 — Depth:** 3–4 species, full tag set, weather/time, photo gallery,
@@ -428,7 +461,7 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 
 ---
 
-## 13. Open decisions
+## 14. Open decisions
 
 - **Engine:** recommendation is **Godot 4** for a solo 2D pixel-art mobile game
   (free, lightweight, great 2D & mobile export). Alternatives: Unity, or
@@ -436,9 +469,16 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 - Working title / art direction reference board.
 - Exact starting tag set and pet comfort profiles (needs prototyping/tuning).
 - Visitor cadence tuning (how often, how rare).
-- **Limited-time / seasonal event pets:** do any *missable* pets exist, or does
-  that violate the cozy promise? *Leaning: seasonal visitors return each year,
-  nothing permanently missable.*
+- ~~Limited-time / seasonal event pets~~ **Resolved:** migration frame means
+  seasonal visitors return each year; nothing permanently missable.
+
+### Still to design (next sessions)
+- **Shape of time & retention:** real-time vs accelerated clock, day/weather/
+  seasons, offline behavior, the daily session loop, cozy-ethical notifications.
+- **Onboarding / first 5 minutes:** teach the spine without a tutorial wall.
+- **Progression & pacing curve:** how the haven opens over weeks; multiple
+  rooms/biomes; what gates species, tools, and rooms.
+- **Tech & art direction:** lock the engine; base resolution, palette, pipeline.
 
 ---
 
