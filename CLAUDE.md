@@ -15,12 +15,19 @@ decoration is functional, and that is the spine the whole game hangs from.*
 
 ## Current state
 
-- **Design: complete.** Pre-production. **No game code exists yet.**
-- The repo currently holds only documentation (`DESIGN.md`, `README.md`, this
-  file). The Godot project has not been scaffolded.
-- **Next concrete task:** the **MVP vertical slice** — one pet, one room — exactly
-  as scoped in [`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice). Do not
-  build beyond MVP scope without being asked; §16 lists explicit non-goals.
+- **Design: complete.** Pre-production.
+- A **playable MVP prototype exists** in [`prototype/`](prototype/) — a
+  zero-install **HTML5/Canvas** build implementing the §16 vertical slice (tag
+  system, Charm, needs-as-invitations, bond, decor-driven cat AI, a growable
+  plant, a visiting sparrow, photos→Coins, onboarding, local save). It is a
+  **throwaway design-validation probe**, *not* the production codebase. See
+  [`prototype/README.md`](prototype/README.md).
+- **The Godot 4 production project has NOT been scaffolded yet.** Engine remains
+  locked to Godot 4 (§15); the HTML prototype was a deliberate, user-approved
+  shortcut for instant testing only.
+- **Next concrete task:** scaffold the **Godot 4 MVP** — port the validated §16
+  loop into the locked engine. Do not build beyond MVP scope without being
+  asked; §16 lists explicit non-goals.
 
 ## Locked technical decisions (see §15)
 

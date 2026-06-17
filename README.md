@@ -16,9 +16,15 @@ the spine the whole game hangs from.
 
 ## Status
 
-Concept **design is complete**; pre-production. No game code yet. The next
-concrete step is the **MVP vertical slice** (one pet, one room) described in
-[`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice).
+Concept **design is complete**. A **playable prototype of the MVP vertical slice**
+(one pet, one room) now exists in [`prototype/`](prototype/) — a zero-install
+browser build that proves the spine end to end. See
+[`prototype/README.md`](prototype/README.md) for what's implemented and how to run
+it. The canonical production build is still **Godot 4** (§15); the prototype is a
+throwaway design-validation probe.
+
+▶ **Try it:** open [`prototype/index.html`](prototype/index.html) in any browser
+(desktop or mobile). The MVP scope it implements is [`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice).
 
 **Locked decisions:** Engine **Godot 4**; mobile-first **portrait**; **3/4 angled
 diorama** camera; **hi-fi modern pixel art** with dynamic lighting.
@@ -36,7 +42,9 @@ diorama** camera; **hi-fi modern pixel art** with dynamic lighting.
 |---|---|
 | `DESIGN.md` | Complete game design document (source of truth). |
 | `CLAUDE.md` | Project orientation for Claude Code / AI sessions. |
+| `prototype/` | Playable browser MVP prototype (HTML5/Canvas) + its README. |
 | `README.md` | This file. |
 
-There is no engine project committed yet; the Godot project will be scaffolded
-when MVP work begins.
+The Godot 4 production project has not been scaffolded yet — the `prototype/`
+build is a separate, instant-to-run validation probe (see its README), not the
+production codebase.

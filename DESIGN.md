@@ -3,8 +3,10 @@
 > Working title: TBD. A cozy mobile game about raising pets and cultivating a
 > living habitat in a cute, modern pixel-art style.
 
-**Status:** Concept design **complete**; pre-production. Next action: build the
-**MVP vertical slice** (§16).
+**Status:** Concept design **complete**; pre-production. A throwaway
+**browser (HTML5) prototype of the MVP** (§16) exists in [`prototype/`](prototype/)
+and validates the spine end to end; next action: port it to the locked engine —
+the **Godot 4 MVP vertical slice** (§16).
 **Platform:** Mobile-first (iOS + Android), portrait; desktop/web builds come
 free from the engine for prototyping (§15).
 **Engine:** **Godot 4** — locked (§15).
@@ -761,7 +763,14 @@ changes who shows up and how the cat behaves* — and wants to keep tweaking it.
 ### Still open (need prototyping/tuning, not a decision)
 - Working title; an art-direction reference/mood board.
 - Exact starting tag set and per-pet comfort profiles — tune against the MVP.
+  *(The `prototype/` build ships first-pass values: cat profile
+  `warmth 7 · softness 8 · hiding 4 · greenery 2`, sparrow
+  `greenery 8 · softness 3 · warmth 3 · hiding 1` — a starting point to tune, not
+  a decision.)*
 - Visitor cadence tuning (how often, how rare).
+- **Prototype vs. production:** the `prototype/` HTML5 build is a design probe
+  only; the Godot pipeline specifics below remain open until the Godot MVP is
+  scaffolded.
 - **Pipeline specifics:** base virtual resolution, pixels-per-unit, scaling
   mode, and the Aseprite → Godot atlas/tag convention (§15) — firm up alongside
   the first real art and the MVP build.
