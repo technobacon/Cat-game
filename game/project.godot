@@ -28,6 +28,10 @@ SaveManager="*res://src/autoload/save_manager.gd"
 ; Mobile-first, portrait — base virtual resolution 720x1280 (DESIGN §15).
 window/size/viewport_width=720
 window/size/viewport_height=1280
+# Desktop window scaled to fit typical monitors; mobile ignores these overrides
+# and uses the full screen. The logical resolution stays 720x1280 (P§1).
+window/size/window_width_override=540
+window/size/window_height_override=960
 window/handheld/orientation="portrait"
 ; canvas_items stretch + keep aspect; the world SubViewport is integer-scaled
 ; for pixel-perfect art independently of the resolution-independent HUD (P§1).
