@@ -32,7 +32,7 @@ func _build() -> void:
 	var grid := GridContainer.new()
 	grid.columns = 2
 	for id in RoomState.catalog.keys():
-		var it := RoomState.item(StringName(id))
+		var it: DecorItem = RoomState.item(StringName(id))
 		var b := Button.new()
 		b.text = it.display_name
 		b.pressed.connect(func() -> void: _controller.begin_placing(it.id))

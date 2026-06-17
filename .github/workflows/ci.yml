@@ -11,7 +11,7 @@ jobs:
     name: Headless GUT tests
     runs-on: ubuntu-latest
     env:
-      GODOT_VERSION: "4.3-stable"
+      GODOT_VERSION: "4.6.3-stable"
       GUT_VERSION: "v9.3.0"
     steps:
       - uses: actions/checkout@v4

@@ -44,7 +44,7 @@ func rotate_action() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if room == null or not _is_primary_press(event):
 		return
-	var cell := room.world_to_cell(_event_pos(event))
+	var cell: Vector2i = room.world_to_cell(_event_pos(event))
 	_handle_tap(cell)
 
 

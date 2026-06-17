@@ -22,7 +22,7 @@ func _ready() -> void:
 
 
 func _center_grid() -> void:
-	var gs := RoomState.model.grid_size
+	var gs: Vector2i = RoomState.model.grid_size
 	var px := Vector2(gs.x, gs.y) * TILE_PX
 	origin = (Vector2(BASE_RESOLUTION) - px) * 0.5
 
@@ -37,7 +37,7 @@ func world_to_cell(world: Vector2) -> Vector2i:
 
 
 func _draw() -> void:
-	var gs := RoomState.model.grid_size
+	var gs: Vector2i = RoomState.model.grid_size
 	var w := gs.x * TILE_PX
 	var h := gs.y * TILE_PX
 	for x in range(gs.x + 1):
@@ -54,7 +54,7 @@ func _rebuild() -> void:
 	for c in _items_root.get_children():
 		c.queue_free()
 	for p in RoomState.placements():
-		var it := RoomState.item(p.item_id)
+		var it: DecorItem = RoomState.item(p.item_id)
 		if it == null:
 			continue
 		_items_root.add_child(_make_visual(p, it))

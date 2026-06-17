@@ -26,9 +26,9 @@ func test_economy_never_below_zero() -> void:
 
 
 func test_save_round_trip() -> void:
-	var ok := SaveManager.save_state({"hello": "world"})
+	var ok: int = SaveManager.save_state({"hello": "world"})
 	assert_eq(ok, OK, "save_state returns OK")
-	var loaded := SaveManager.load_state()
+	var loaded: Dictionary = SaveManager.load_state()
 	# JSON numbers parse as float; compare as int against the version constant.
 	assert_eq(int(loaded.get("save_version")), SaveManager.SAVE_VERSION, "save_version is written")
 	var state: Dictionary = loaded.get("state", {})

@@ -18,8 +18,8 @@ func test_same_seed_reproduces_sequence() -> void:
 func test_state_save_restore_continues_stream() -> void:
 	RNG.reseed(7)
 	RNG.randf()
-	var saved_state := RNG.get_state()
-	var expected := RNG.randf()
+	var saved_state: int = RNG.get_state()
+	var expected: float = RNG.randf()
 	RNG.set_state(saved_state)
-	var got := RNG.randf()
+	var got: float = RNG.randf()
 	assert_eq(got, expected, "Restoring RNG state continues the same stream")

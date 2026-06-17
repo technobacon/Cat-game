@@ -11,7 +11,7 @@ const PALETTE_SCRIPT := preload("res://src/ui/palette.gd")
 func _ready() -> void:
 	var viewport := _build_world()
 
-	var room := ROOM_SCENE.instantiate()
+	var room: Node2D = ROOM_SCENE.instantiate()
 	viewport.add_child(room)
 
 	# Controller lives inside the SubViewport so input is already in room-space.
