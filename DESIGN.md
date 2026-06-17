@@ -226,22 +226,56 @@ habitat → court the pet. Discovery is active, driven by the same tag system.
 
 ---
 
-## 8. Plants & economy
+## 8. Economy: currencies, decoration & income
 
-- Plants grow on **real-world time** (cozy cadence, no energy bars).
-- Harvest → **soft currency** (plus caring for pets and taking photos also pays
-  out a little).
-- **Symbiosis:** a pet that loves a plant boosts its yield; plants emit tags
-  that attract pets. Visible cause-and-effect, not a hidden buff number.
+### Two earned currencies (+ cosmetic cash)
+
+- **Coins — the volume/utility currency (earned).** The workhorse. Buys the
+  *bulk* of decor and plants — everyday building blocks. (Sources detailed below.)
+- **Trinkets — the prestige/beauty currency (earned only, never cash).** Come
+  primarily from **thriving residents bringing you little found treasures** (the
+  cat drops a shiny button, the magpie a glass bead), plus Charm milestones and
+  visitor gifts. Trinkets buy the *rare, gorgeous, high-Charm* pieces — so you
+  **cannot brute-force a beautiful room by grinding Coins**; the most beautiful
+  items are gated behind the game's actual values (care + aesthetics). Pets
+  literally help furnish their own beautiful home.
+
+### Decoration acquisition & placement
+
+- **Never tax creativity.** Buying costs; **placing, moving, rotating, and
+  storing are always free and unlimited.** Friction on rearranging punishes the
+  exact behavior the game is built on.
+- **Multi-source acquisition** (keeps discovery alive):
+  - **Shop** — rotating + permanent stock; Coins for staples, Trinkets for the
+    aspirational tier.
+  - **Pet & visitor gifts** — thriving residents/happy visitors leave decor,
+    seeds, materials. Ties decor back to care.
+  - **Achievement / field-guide unlocks** — themed items you can't buy; badges
+    you *display*.
+  - **Seasonal/weather items** — return each year (anti-FOMO).
+  - **Crafting (Phase 2+)** — gather materials (harvest byproducts, shed fur →
+    yarn) into items. Defer past MVP.
+- **Placement UX:** snap-to-grid with layers (floor / wall / surfaces / hanging
+  — layering powers the *Composition* Charm factor); free drag, rotate/flip,
+  free storage & retrieval; a few free starter items for onboarding.
 
 ### Monetization line (hard rule)
-- **Soft currency (earned)** buys *everything functional*: decor, plants,
+- **Coins & Trinkets (earned)** buy *everything functional*: decor, plants,
   habitat expansions, new species. A non-paying player can collect every pet.
 - **Real money** buys *only cosmetics*: recolors, patterns, pet accessories
   (hats/collars), photo frames & filters, decorative-only items, room themes.
-- **Never** sell a species, a need-fix, or a thriving boost. Money buys flair,
-  never advantage. The moment money buys an edge in a relationship, the fantasy
-  dies.
+- Paid cosmetics must be **Charm-neutral** — a different look, never an
+  easier-to-harmonize one. Free items must be able to hit max Charm, or color
+  scoring becomes a stealth paywall on attraction.
+- **Never** sell a species, a need-fix, a thriving boost, or Trinkets. Money
+  buys flair, never advantage.
+
+### Plants & symbiosis
+- Plants are **habitat pieces first** (tags + Charm + symbiosis), not an income
+  treadmill. They grow on real-world time (no energy bars).
+- **Symbiosis:** a pet that loves a plant boosts its yield; plants emit tags
+  that attract pets. Visible cause-and-effect, not a hidden buff number.
+- *(Where Coins actually come from is being designed — see Open decisions.)*
 
 ---
 
