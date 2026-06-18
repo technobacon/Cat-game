@@ -18,17 +18,19 @@ decoration is functional, and that is the spine the whole game hangs from.*
 - **Design: complete.** **Development plan: complete** — see
   [`DEVELOPMENT_PLAN.md`](DEVELOPMENT_PLAN.md) (architecture, data model,
   system specs, and the sequenced **M0–M13** MVP milestone plan).
-- **Engineering: M0–M1 landed** (Godot 4 project under `game/`). M0: autoloads,
-  GUT + CI, ratified pipeline values. M1: a pure, unit-tested `RoomModel`
-  (grid/inventory/overlap/rotation/serialization), `RoomState`, a placeholder
-  `ItemCatalog`, and the room view + placement controller + decor palette. CI is
-  green (19 tests). The interactive layer compiles but has **not yet been run
-  visually** in-engine — a manual desktop run is the open verification for M1.
-- **Next concrete task: milestone M2** (tag system & Charm) from
-  DEVELOPMENT_PLAN.md §5 — the mechanical heart (DESIGN §3–4) — building toward
-  the **MVP vertical slice** (one pet, one room;
-  [`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice)). Do not build beyond
-  MVP scope without being asked; §16 lists explicit non-goals.
+- **Engineering: M0–M2 landed** (Godot 4 project under `game/`; CI green on
+  Godot 4.6.3, 32 tests). M0: autoloads, GUT + CI, ratified pipeline values.
+  M1: pure `RoomModel` (grid/inventory/overlap/rotation/serialization),
+  `RoomState`, placeholder `ItemCatalog`, room view + placement controller +
+  decor palette. M2: tag system (`Tags`, `RoomAggregator` with diminishing
+  returns) and `Charm` (Harmony/Coherence/Composition/Variety) + live Room
+  Report panel. Pure logic is unit-tested; the **interactive layer has had
+  partial manual testing** (placing works; store/move pending the user's
+  re-test on the latest build).
+- **Next concrete task: milestone M3** (the cat: presence & roaming) from
+  DEVELOPMENT_PLAN.md §5, building toward the **MVP vertical slice** (one pet,
+  one room; [`DESIGN.md` §16](DESIGN.md#16-mvp--the-vertical-slice)). Do not
+  build beyond MVP scope without being asked; §16 lists explicit non-goals.
 
 ## Locked technical decisions (see §15)
 
