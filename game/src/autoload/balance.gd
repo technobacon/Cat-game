@@ -11,3 +11,6 @@ const NEED_FLOOR := 0.25
 
 ## Baseline daily "mail" stipend in Coins (DESIGN §10). Placeholder.
 const DAILY_STIPEND_COINS := 10
+
+## Per-item-type diminishing-returns decay for tag aggregation (DESIGN §4 #1).
+const DIMINISHING_DECAY := 0.6

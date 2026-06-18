@@ -14,5 +14,10 @@ extends Resource
 @export var footprint: Vector2i = Vector2i.ONE
 ## Placeholder block color until real art lands (DESIGN §15).
 @export var placeholder_color: Color = Color.WHITE
-## TODO(M2): TagVector contribution emitted into the room (DESIGN §3).
+## Tag contribution emitted into the room over Tags.AXES (DESIGN §3).
 @export var tags: Dictionary = {}
+## Charm attributes (DESIGN §4): palette for Harmony, theme for Coherence,
+## quality for "quality over quantity".
+@export var palette_key: StringName = &"neutral"
+@export var theme_key: StringName = &"misc"
+@export var quality: int = 1

@@ -6,6 +6,9 @@ extends Node
 ## Room tag vector and/or Charm changed after a placement edit (DESIGN §3–4).
 signal room_changed(tag_vector: Dictionary, charm: float)
 
+## Full Room Report (Charm + sub-factors + tips) after a placement edit (DESIGN §4).
+signal room_report(report: Dictionary)
+
 ## A pet need changed (DESIGN §8). value is 0..1.
 signal need_changed(need_id: StringName, value: float)
 

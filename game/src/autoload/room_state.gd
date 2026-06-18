@@ -6,6 +6,11 @@ extends Node
 var model := RoomModel.new()
 var catalog: Dictionary = {}
 
+## Latest derived room state (DESIGN §3–4), refreshed on every placement edit.
+var last_tags: Dictionary = {}
+var last_charm: float = 0.0
+var last_report: Dictionary = {}
+
 
 func _ready() -> void:
 	catalog = ItemCatalog.build()
@@ -75,6 +80,10 @@ func restore(d: Dictionary) -> void:
 
 
 func _changed() -> void:
-	# TODO(M2): compute the room tag vector + Charm here before broadcasting
-	# (DESIGN §3–4). For M1 the room has structure but no semantics yet.
-	EventBus.room_changed.emit({}, 0.0)
+	# Recompute the room's tag vector (with diminishing returns) and Charm, then
+	# broadcast (DESIGN §3–4).
+	last_report = Charm.evaluate(model.placements(), catalog, model.grid_size)
+	last_tags = RoomAggregator.aggregate(model.placements(), catalog, Balance.DIMINISHING_DECAY)
+	last_charm = float(last_report.get("charm", 0.0))
+	EventBus.room_changed.emit(last_tags, last_charm)
+	EventBus.room_report.emit(last_report)

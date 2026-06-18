@@ -8,6 +8,7 @@ extends Node
 
 const ROOM_SCENE := preload("res://scenes/room.tscn")
 const PALETTE_SCRIPT := preload("res://src/ui/palette.gd")
+const REPORT_SCRIPT := preload("res://src/ui/room_report.gd")
 
 
 func _ready() -> void:
@@ -49,3 +50,7 @@ func _build_hud(controller: PlacementController) -> void:
 	palette.set_anchors_preset(Control.PRESET_FULL_RECT)
 	hud.add_child(palette)
 	palette.setup(controller)
+
+	var report := REPORT_SCRIPT.new()
+	report.set_anchors_preset(Control.PRESET_FULL_RECT)
+	hud.add_child(report)
