@@ -128,13 +128,91 @@ def build():
     return img
 
 
-def save(img):
+def build_stand():
+    """Black cat standing on all fours, 3/4 view, tail raised + curled."""
+    img, d = new_canvas()
+
+    # ---- FAR LEGS (drawn first, slightly darker, behind body) ----
+    for cx in (28, 41):
+        d.rectangle((cx - 2, 42, cx + 2, 57), fill=OUTLINE)
+        d.rectangle((cx - 1, 43, cx + 1, 56), fill=FUR_DARK)
+        fill_ellipse(d, (cx - 3, 54, cx + 3, 58), OUTLINE)
+        fill_ellipse(d, (cx - 2, 55, cx + 2, 57), FUR_DARK)
+
+    # ---- TAIL (rises from rear, sweeps up-right, tip curls) ----
+    d.line([(45, 38), (52, 30), (55, 22), (53, 15), (47, 13)],
+           fill=OUTLINE, width=6, joint="curve")
+    d.line([(45, 38), (52, 30), (55, 22), (53, 15), (47, 13)],
+           fill=FUR, width=4, joint="curve")
+    d.line([(46, 36), (52, 29), (54, 22)], fill=FUR_LIGHT, width=1)
+    fill_ellipse(d, (44, 11, 51, 18), OUTLINE)          # curled tip
+    fill_ellipse(d, (45, 12, 50, 17), FUR)
+
+    # ---- BODY (horizontal, angled down to the rear) ----
+    fill_ellipse(d, (17, 28, 49, 50), OUTLINE)
+    fill_ellipse(d, (18, 29, 48, 49), FUR)
+    fill_ellipse(d, (20, 34, 46, 49), FUR_DARK)         # belly shadow
+    d.arc((18, 29, 48, 48), 150, 280, fill=FUR_RIM)     # top rim light
+    fill_ellipse(d, (21, 30, 41, 42), FUR_LIGHT)        # back lit
+    fill_ellipse(d, (23, 39, 39, 49), BELLY)            # chest/belly
+
+    # ---- NEAR LEGS (front of body, full tone) ----
+    for cx in (24, 38):
+        d.rectangle((cx - 3, 42, cx + 3, 57), fill=OUTLINE)
+        d.rectangle((cx - 2, 43, cx + 2, 56), fill=FUR)
+        d.rectangle((cx - 2, 51, cx + 2, 56), fill=FUR_DARK)
+        d.line((cx - 2, 43, cx - 2, 54), fill=FUR_LIGHT)
+        fill_ellipse(d, (cx - 4, 54, cx + 4, 59), OUTLINE)
+        fill_ellipse(d, (cx - 3, 55, cx + 3, 58), FUR)
+        px(d, cx, 57, FUR_DARK)                         # toe seam
+
+    # ---- HEAD (up at the front-left, facing viewer) ----
+    head_box = (8, 8, 34, 34)
+    fill_ellipse(d, (7, 7, 35, 35), OUTLINE)
+    fill_ellipse(d, head_box, FUR)
+    fill_ellipse(d, (11, 22, 31, 34), FUR_DARK)         # lower face shadow
+    d.arc((9, 9, 33, 33), 150, 270, fill=FUR_RIM)       # rim light
+    fill_ellipse(d, (12, 11, 28, 23), FUR_LIGHT)        # forehead light
+
+    # ---- EARS (upright, compact triangles) ----
+    d.polygon([(11, 12), (12, 0), (22, 11)], fill=OUTLINE)
+    d.polygon([(12, 11), (13, 3), (20, 11)], fill=FUR)
+    d.polygon([(13, 10), (14, 6), (18, 11)], fill=EAR_PINK)
+    d.polygon([(30, 12), (29, 0), (19, 11)], fill=OUTLINE)
+    d.polygon([(29, 11), (28, 3), (21, 11)], fill=FUR)
+    d.polygon([(28, 10), (27, 6), (23, 11)], fill=EAR_PINK)
+
+    # ---- EYES (green, facing viewer) ----
+    for ex in (16, 26):
+        fill_ellipse(d, (ex - 3, 18, ex + 3, 27), OUTLINE)
+        fill_ellipse(d, (ex - 2, 19, ex + 2, 26), EYE_GREEN)
+        fill_ellipse(d, (ex - 2, 23, ex + 2, 26), EYE_GREEN_D)
+        d.rectangle((ex - 1, 19, ex, 26), fill=PUPIL)
+        px(d, ex - 1, 20, WHITE)
+
+    # ---- NOSE + MOUTH ----
+    d.polygon([(20, 27), (22, 27), (21, 29)], fill=NOSE_PINK)
+    px(d, 21, 30, OUTLINE)
+    px(d, 19, 31, OUTLINE); px(d, 20, 31, OUTLINE)
+    px(d, 22, 31, OUTLINE); px(d, 23, 31, OUTLINE)
+
+    # ---- WHISKERS ----
+    for (sx, sy, ex, ey) in [
+        (12, 28, 2, 26), (12, 30, 2, 31),
+        (30, 28, 40, 26), (30, 30, 40, 31),
+    ]:
+        d.line((sx, sy, ex, ey), fill=WHISKER)
+
+    return img
+
+
+def save(img, name):
     base = "/home/user/Cat-game/game/assets/sprites/cat"
-    img.save(f"{base}/cat_idle_64.png")
-    big = img.resize((W * 8, H * 8), Image.NEAREST)
-    big.save(f"{base}/cat_idle_64_preview_8x.png")
-    print("saved cat_idle_64.png and 8x preview")
+    img.save(f"{base}/{name}.png")
+    img.resize((W * 8, H * 8), Image.NEAREST).save(f"{base}/{name}_preview_8x.png")
+    print(f"saved {name}.png and 8x preview")
 
 
 if __name__ == "__main__":
-    save(build())
+    save(build(), "cat_idle_64")
+    save(build_stand(), "cat_stand_64")

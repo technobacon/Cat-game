@@ -9,8 +9,9 @@ starter pet for the MVP vertical slice (DESIGN.md §16) and feeds milestone **M3
 
 | File | Size | Purpose |
 |------|------|---------|
-| `cat_idle_64.png` | 64×64 RGBA | The sprite — transparent background, idle/sit pose. |
-| `cat_idle_64_preview_8x.png` | 512×512 | Nearest-neighbour preview for review only (not shipped). |
+| `cat_stand_64.png` | 64×64 RGBA | Standing 3/4-view pose, tail raised + curled (primary). |
+| `cat_idle_64.png` | 64×64 RGBA | Seated idle pose. |
+| `*_preview_8x.png` | 512×512 | Nearest-neighbour previews for review only (not shipped). |
 
 ## Regenerating
 
